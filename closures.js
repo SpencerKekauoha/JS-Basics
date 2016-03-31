@@ -12,11 +12,14 @@ var outer = function(){
 // Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
+  
+  var inner = outer();
+  
 
 //Once you do that, invoke inner.
 
   //Code Here
-
+inner();
 
 
 //Next problem
@@ -35,6 +38,11 @@ var callFriend = function(){
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
+var innerFn = callFriend();
+innerFn();
+
+
+
 
 
 
@@ -45,14 +53,27 @@ var callFriend = function(){
 /*
   Write a function called makeCounter that makes the following code work properly.
 */  //Code Here
+
+var makeCounter = function() {
+  var num = 0;
+  return function() {
+     num = num + 1;
+     return num;
+  }
+   
+}
+
+var count = makeCounter();
+
+
+
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4  
   
   
-//Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+
 
 
 
@@ -141,7 +162,26 @@ counter = counterFactory(10);
 
   // To make this code work you will need to create a new scope for every iteration.
 
-
+var funcArray = [
+    function() {
+        return 0;
+    },
+   function() {
+        return 1;
+    },
+    function() {
+        return 2;
+    },
+    function() {
+        return 3;
+    },
+    function() {
+        return 4;
+    },
+    function() {
+        return 5;
+    },
+]
 
 
 
